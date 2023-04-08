@@ -3,30 +3,71 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-image: url("Images/Pattern.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
 
   .container {
+    background-image: url("Images/Background.jpg");   
     display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+    min-height: 90vh;
+    width: 90vw;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    border-radius: 1vmax;
+    padding: 10vh 5vw 5vh 5vw;
   }
 
-  .info {
-    width: 10vw;
-    height: 5vh;
+  .info h1 {
+    background: #7C7C7C;
+    border-bottom: 0.7vmin inset rgba(0,0,0,.5);
+    border-left: 0.7vmin inset rgba(0,0,0,.5);
+    border-right: 0.7vmin inset rgba(255,255,255,.5);
+    border-top: 0.7vmin inset rgba(255,255,255,.5);
+    color: white;
+    font: 2vmin "Press start 2P";
+    margin: 1vh;
+    padding: 0.5vmin;
     position: absolute;
-    top: 2vh;
-    left: 2vw;
-    border: 1vmin black solid;
-    z-index: 1;
+    left: 7vw;
+    text-transform: uppercase;
+    top: 7vh;
+    width: auto;
   }
 
-  .card {
-    height: 20vh;
-    width: 12vh;
-    background-image: url("../Assets/Background/deepForest.png");
+  h1 {
+    font: 1vmin "Press start 2P";
+    text-align: center;
+    text-justify: center;
+    padding: 0.5vmin;
+  }
+
+  .frontCard {
+    height: 25vh;
+    width: 18vh;
+    background-color: white;
+    /*background-image: url("../Assets/Background/deepForest.png");*/
+    background-position: center;
+    background-size: cover;
+    padding: 1.5vmin 2.5vmin 4vmin 2.5vmin;
+    border-radius: 1vmin;
+    margin: 1vh 1vw;
+    rotate: 0deg;
+  }
+
+  .backCard {
+    height: 25vh;
+    width: 18vh;
+    background-color: white;
+    /*background-image: url("../Assets/Background/deepForest.png");*/
     background-position: center;
     background-size: cover;
     padding: 1.5vmin 2.5vmin 4vmin 2.5vmin;
@@ -41,6 +82,10 @@
     align-items: flex-end;
     height: 14vh;
     width: 6vw;
+  }
+
+  .pokemon {
+    transform-origin: 80% ;
   }
 
   .describe {
@@ -58,17 +103,21 @@
     margin-top: 0.5vmin;
   }
 
-  h1 {
-    font: 1vmin "Press start 2P";
-    text-align: center;
-    text-justify: center;
+  button {
+    background: #ED0000;
+    border-bottom: 0.7vmin inset rgba(0,0,0,.5);
+    border-left: 0.7vmin inset rgba(0,0,0,.5);
+    border-right: 0.7vmin inset rgba(255,255,255,.5);
+    border-top: 0.7vmin inset rgba(255,255,255,.5);
+    color: white;
+    cursor: pointer;
+    font: 2vmin "Press start 2P";
+    margin: 1vh;
     padding: 0.5vmin;
+    position: absolute;
+    right: 7vw;
+    text-transform: uppercase;
+    top: 7vh;
+    width: auto;
   }
 
-  button {
-    margin: 0;
-    position: relative;
-    top: 1%;
-    left: 50%;
-    transform: translateX(-50%);
-  }

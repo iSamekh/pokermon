@@ -5,7 +5,7 @@ if (localStorage.getItem("token") == null) {
 
 const userLogado = JSON.parse(localStorage.getItem("userLogado"));
 const user = document.querySelector("#user");
-user.innerHTML += `${userLogado.nome}`;
+user.innerHTML += `${userLogado.nome} Pokedex`;
 
 function quit() {
     localStorage.removeItem("token");

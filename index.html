@@ -11,22 +11,39 @@
 
 <body>
 
+
     <div class="container">
-        <div class="card">
-            <h1 class="describe">Bulbasaur</h1>
-            <div class="cardImage">
-                <img class="pokemon" src="./Assets/Gen1/bulbasaur.gif" />
-            </div>
-            <div class="describe">
-                <span class="types">
-                    <img class="type" src="./Assets/Types/Grass.png" />
-                    <img class="type" src="./Assets/Types/Poison.png" />
-                </span>
-            </div>
-        </div>
 
 
-        <div class="card">
+        <article class="card">
+            <div class="frontCard" style="background-image: url('../Assets/Background/deepForest.png')">
+                <h1 class="describe">Bulbasaur</h1>
+                <div class="cardImage">
+                    <img class="pokemon" src="./Assets/Gen1/bulbasaur.gif" />
+                </div>
+                <div class="describe">
+                    <span class="types">
+                        <img class="type" src="./Assets/Types/Grass.png" />
+                        <img class="type" src="./Assets/Types/Poison.png" />
+                    </span>
+                </div>
+            </div>
+
+            <div class="backCard" style="background-image: url('../Assets/backCard/grass.jpg')">
+                <h1 class="describe">Bulbasaur</h1>
+                <div class="cardImage">
+                    <img class="pokemon" src="./Assets/Gen1/bulbasaur.gif" />
+                </div>
+                <div class="describe">
+                    <span class="types">
+                        <img class="type" src="./Assets/Types/Grass.png" />
+                        <img class="type" src="./Assets/Types/Poison.png" />
+                    </span>
+                </div>
+        </article>
+
+        <article class="card">
+        <div class="frontCard" style="background-image: url('../Assets/Background/volcano.jpg')">
             <h1 class="describe">Charizard</h1>
             <div class="cardImage">
                 <img class="pokemon" src="./Assets/Gen1/charizard.gif" />
@@ -38,13 +55,31 @@
                 </span>
             </div>
         </div>
-    </div>
 
-    <div class="info">
-        <h1 id="user">Logged as </h1>
+        <div class="backCard" style="background-image: url('./Assets/backCard/fire.jpg')">
+            <h1 class="describe">Bulbasaur</h1>
+            <div class="cardImage">
+                <img class="pokemon" src="./Assets/Gen1/bulbasaur.gif" />
+            </div>
+            <div class="describe">
+                <span class="types">
+                    <img class="type" src="./Assets/Types/Grass.png" />
+                    <img class="type" src="./Assets/Types/Poison.png" />
+                </span>
+            </div>
+            </article>
+
+        </div>
+
+
+        <div class="info">
+            <h1 id="user"></h1>
+        </div>
+
         <button onclick="quit()">Logoff</button>
-    </div>
-    <script src="./Index/index.js"></script>
+
+
+        <script src="./Index/index.js"></script>
 </body>
 
 </html>
