@@ -91,7 +91,6 @@ function cadastrar(){
     
     localStorage.setItem('listaUser', JSON.stringify(listaUser))
     
-   
     msgSuccess.setAttribute('style', 'display: block')
     msgSuccess.innerHTML = '<strong>Cadastrando usuário...</strong>'
     msgError.setAttribute('style', 'display: none')
