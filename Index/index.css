@@ -18,10 +18,15 @@
     rotate: 0deg;
   }
 
-  .pokemon {
-    width: 100%;
-    border-radius: 2vmin;
+  .cardImage {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 14vh;
+    width: 6vw;
   }
+
+
 
   .describe {
     background-color: #FFFFFF88;
