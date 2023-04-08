@@ -3,10 +3,9 @@ if (localStorage.getItem("token") == null) {
     window.location.href = "./login.html";
 }
 
-const userOnline = JSON.parse(localStorage.getItem("userOnline"));
-
+const userLogado = JSON.parse(localStorage.getItem("userLogado"));
 const user = document.querySelector("#user");
-user.innerHTML = `Hello ${userOnline.name}`;
+user.innerHTML += `${userLogado.nome}`;
 
 function quit() {
     localStorage.removeItem("token");

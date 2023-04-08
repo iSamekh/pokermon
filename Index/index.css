@@ -6,6 +6,22 @@
     font-family: 'Roboto', sans-serif;
   }
 
+  .container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info {
+    width: 10vw;
+    height: 5vh;
+    display: absolute;
+    border: 1vmin black solid;
+    margin: 2vh 2vw;
+    z-index: 1;
+  }
+
   .card {
     height: 20vh;
     width: 12vh;
@@ -25,8 +41,6 @@
     height: 14vh;
     width: 6vw;
   }
-
-
 
   .describe {
     background-color: #FFFFFF88;
@@ -50,3 +64,10 @@
     padding: 0.5vmin;
   }
 
+  button {
+    margin: 0;
+    position: relative;
+    top: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
