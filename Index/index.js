@@ -1,6 +1,6 @@
 if (localStorage.getItem("token") == null) {
     alert("Faça o login");
-    window.location.href = "./Login/login.html";
+    window.location.href = "./login.html";
 }
 
 const userOnline = JSON.parse(localStorage.getItem("userOnline"));
@@ -11,5 +11,5 @@ user.innerHTML = `Hello ${userOnline.name}`;
 function quit() {
     localStorage.removeItem("token");
     localStorage.removeItem("userOnline");
-    window.location.href = "./Login/login.html"//https://www.samekh.dev/pokermon/login;
+    window.location.href = "./login.html"//https://www.samekh.dev/pokermon/login;
 }

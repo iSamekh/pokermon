@@ -35,13 +35,12 @@ function entrar(){
          nome: item.nomeCad,
          user: item.userCad,
          senha: item.senhaCad
-       }
-      
+       }    
     }
   })
    
   if(usuario.value == userValid.user && senha.value == userValid.senha){
-    window.location.href = './index.html'
+    window.location.href = '../index.html'
     
     let mathRandom = Math.random().toString(16).substr(2)
     let token = mathRandom + mathRandom

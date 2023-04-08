@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
 * {
     margin: 0;
     padding: 0;
@@ -7,11 +9,12 @@
   .card {
     height: 20vh;
     width: 12vh;
-    background-image: url("./Assets/Background/Deep\ Forest.png");
+    background-image: url("../Assets/Background/deepForest.png");
     background-position: center;
     background-size: cover;
     padding: 1.5vmin 2.5vmin 4vmin 2.5vmin;
     border-radius: 1vmin;
+    margin: 1vh 1vw;
     rotate: 0deg;
   }
 
@@ -21,7 +24,6 @@
   }
 
   .describe {
-    padding: 0;
     background-color: #FFFFFF88;
     border-radius: 1vmin;
   }
@@ -37,7 +39,9 @@
   }
 
   h1 {
-    font-size: 2.5vmin;
+    font: 1vmin "Press start 2P";
     text-align: center;
+    text-justify: center;
+    padding: 0.5vmin;
   }
 
