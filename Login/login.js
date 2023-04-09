@@ -41,7 +41,16 @@ function entrar(){
     }
   })
    
-  if(usuario.value == userValid.user && usuario.value.length > 4 && senha.value == userValid.senha && senha.value.length > 5){
+  if(!usuario.value.length || !senha.value.length){
+    userLabel.setAttribute('style', 'color: red')
+    usuario.setAttribute('style', 'border-color: red')
+    senhaLabel.setAttribute('style', 'color: red')
+    senha.setAttribute('style', 'border-color: red')
+    msgError.setAttribute('style', 'display: block')
+    msgError.innerHTML = 'Preencha o campo usuário e senha'
+    usuario.focus()
+
+  } else if(usuario.value == userValid.user && senha.value == userValid.senha) {
     window.location.href = './index.html'
     
     let mathRandom = Math.random().toString(16).substr(2)
@@ -49,6 +58,7 @@ function entrar(){
     
     localStorage.setItem('token', token)
     localStorage.setItem('userLogado', JSON.stringify(userValid))
+
   } else {
     userLabel.setAttribute('style', 'color: red')
     usuario.setAttribute('style', 'border-color: red')
