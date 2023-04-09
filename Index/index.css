@@ -1,129 +1,167 @@
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press start 2P";
+}
 
-  body {
-    background-image: url("Images/Pattern.jpg");
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+body {
+  background-image: url("Images/Pattern.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  .container {
-    background-image: url("Images/Background.jpg");   
-    display: flex;
-    min-height: 90vh;
-    width: 90vw;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    border-radius: 1vmax;
-    padding: 10vh 5vw 5vh 5vw;
-  }
+.container {
+  background-image: url("Images/Background.jpg");
+  display: flex;
+  flex-wrap: wrap;
+  height: 90vh;
+  max-width: 90vw;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  border-radius: 1vmax;
+  padding: 10vh 5vw 5vh 5vw;
+  overflow: hidden scroll;
+}
 
-  .info h1 {
-    background: #7C7C7C;
-    border-bottom: 0.7vmin inset rgba(0,0,0,.5);
-    border-left: 0.7vmin inset rgba(0,0,0,.5);
-    border-right: 0.7vmin inset rgba(255,255,255,.5);
-    border-top: 0.7vmin inset rgba(255,255,255,.5);
-    color: white;
-    font: 2vmin "Press start 2P";
-    margin: 1vh;
-    padding: 0.5vmin;
-    position: absolute;
-    left: 7vw;
-    text-transform: uppercase;
-    top: 7vh;
-    width: auto;
-  }
+.info h1 {
+  background: #7C7C7C;
+  border-bottom: 0.7vmin inset rgba(0, 0, 0, .5);
+  border-left: 0.7vmin inset rgba(0, 0, 0, .5);
+  border-right: 0.7vmin inset rgba(255, 255, 255, .5);
+  border-top: 0.7vmin inset rgba(255, 255, 255, .5);
+  color: white;
+  font-size: 2vmin;
+  margin: 1vh;
+  padding: 0.5vmin;
+  position: absolute;
+  left: 7vw;
+  text-transform: uppercase;
+  top: 7vh;
+  width: auto;
+}
 
-  h1 {
-    font: 1vmin "Press start 2P";
-    text-align: center;
-    text-justify: center;
-    padding: 0.5vmin;
-  }
+h1 {
+  font-size: 1vmin;
+  text-align: center;
+  text-justify: center;
+  padding: 0.5vh;
+}
 
-  .frontCard {
-    height: 25vh;
-    width: 18vh;
-    background-color: white;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1vh 2.5vw 1vh 2.5vw;
-    border-radius: 1vmin;
-    margin: 1vh 1vw;
-    rotate: 0deg;
-  }
+h2 {
+  padding: 0.1vh;
+  font-size: 0.8vmin;
+}
 
-  .backCard {
-    height: 25vh;
-    width: 18vh;
-    background-color: white;
-    background-position: center;
-    background-size: cover;
-    padding: 1.5vmin 2.5vmin 4vmin 2.5vmin;
-    border-radius: 1vmin;
-    margin: 1vh 1vw;
-    rotate: 0deg;
-  }
+.attributes br {
+  content: "";
+  margin: 1vh;
+  display: block;
+}
 
-  .cardImage {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 12vh;
-    width: 7vw;
-    background-color: #FFFFFF88;
-    border-radius: 1vmin;
-    margin: 1vmin;
-    padding: 4vh 1vw 1vh 1vw;
-  }
+.frontCard,
+.backCard {
+  align-items: center;
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  border-radius: 1vmin;
+  display: flex;
+  flex-direction: column;
+  height: 28vh;
+  justify-content: center;
+  padding: 1vh 1vw 1vh 1vw;
+  rotate: 0deg;
+  width: 10vw;
 
-  .pokemon {
-  }
+  position: absolute;
+  backface-visibility: hidden;
+}
 
-  .describe {
-    background-color: #FFFFFF88;
-    border-radius: 1vmin;
-    width: 7vw;
-  }
+.backCard {
+  transform: rotateY(180deg);
+}
 
-  .type {
-    height: 7vh;
-    scale: calc(70%);
-  }
+.card:hover .flip {
+  transform: rotateY(180deg);
+}
 
-  .types {
-    display: flex;
-    justify-content: space-around;
-  }
+.cardImage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 14vh;
+  width: 8vw;
+  background-color: #FFFFFF88;
+  border-radius: 1vmin;
+  margin: 1vh 1vw;
+  padding: 1vh 1vw 1vh 1vw;
+}
 
-  button {
-    background: #ED0000;
-    border-bottom: 0.7vmin inset rgba(0,0,0,.5);
-    border-left: 0.7vmin inset rgba(0,0,0,.5);
-    border-right: 0.7vmin inset rgba(255,255,255,.5);
-    border-top: 0.7vmin inset rgba(255,255,255,.5);
-    color: white;
-    cursor: pointer;
-    font: 2vmin "Press start 2P";
-    margin: 1vh;
-    padding: 0.5vmin;
-    position: absolute;
-    right: 7vw;
-    text-transform: uppercase;
-    top: 7vh;
-    width: auto;
-  }
+.card {
+  position: relative;
+  height: 28vh;
+  width: 10vw;
+  perspective: 25vw;
+  margin: 0vh 1.5vw 2.5vh 1.5vw;
+}
 
+.card .flip {
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.describe {
+  background-color: #FFFFFF;
+  border-radius: 1vmin;
+  width: 8vw;
+}
+
+.attributes {
+  background-color: #111111BB;
+  border-radius: 1vmin;
+  width: 8vw;
+  height: 22vh;
+  padding: 1vh 0.7vw;
+  margin: 0.5vh 1vw;
+  font-size: 0.6vmin;
+}
+
+.attributes h2 {
+  margin-bottom: 0.5vh;
+  text-align: center;
+  background-color: #FFFFFF;
+  border-radius: 1vmin;
+}
+
+.type {
+  height: 7vmin;
+}
+
+.types {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  background: #ED0000;
+  border-bottom: 0.7vmin inset rgba(0, 0, 0, .5);
+  border-left: 0.7vmin inset rgba(0, 0, 0, .5);
+  border-right: 0.7vmin inset rgba(255, 255, 255, .5);
+  border-top: 0.7vmin inset rgba(255, 255, 255, .5);
+  color: white;
+  cursor: pointer;
+  font-size: 2vmin;
+  margin: 1vh;
+  padding: 0.5vmin;
+  position: absolute;
+  right: 7vw;
+  text-transform: uppercase;
+  top: 7vh;
+  width: auto;
+}
