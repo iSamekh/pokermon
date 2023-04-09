@@ -41,7 +41,7 @@ function entrar(){
     }
   })
    
-  if(usuario.value == userValid.user && usuario.length > 5 && senha.value == userValid.senha && senha.length > 6){
+  if(usuario.value == userValid.user && usuario.value.length > 4 && senha.value == userValid.senha && senha.value.length > 5){
     window.location.href = './index.html'
     
     let mathRandom = Math.random().toString(16).substr(2)
