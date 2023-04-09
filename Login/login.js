@@ -1,3 +1,5 @@
+console.log("dentro de login.js")
+
 let btn = document.querySelector('.fa-eye')
 
 btn.addEventListener('click', ()=>{

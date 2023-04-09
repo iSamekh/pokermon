@@ -1,3 +1,5 @@
+console.log("dentro de register.js")
+
 let btn = document.querySelector('#verSenha')
 let btnConfirm = document.querySelector('#verConfirmSenha')
 
