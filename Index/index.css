@@ -28,7 +28,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-image: url('./Images/stars.gif');
+  background-image: url('./Images/scrollbar.gif');
   background-attachment: fixed;
   border-radius: 0 100vmax 100vmax 0;
   overflow-y: scroll;
