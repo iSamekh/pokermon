@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url("../images/bg-signup.png");
+  /*background-image: url("../images/bg-signup.png");*/
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed
@@ -94,9 +94,9 @@ button:hover {
   color: #fff;
 }
 
-.justify-center {
+.justify-around {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .fa-eye {
