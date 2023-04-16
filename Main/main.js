@@ -1,7 +1,10 @@
+const userData = JSON.parse(sessionStorage.getItem('userData'))
+const userLogado = userData.nickname
 
-const userLogado = "att"
 const user = document.querySelector("#user");
-user.innerHTML += `${userLogado.nome} Pokedex`;
+
+
+user.innerHTML += `${userData.nickname} Pokedex`;
 
 function quit() {
     window.location.href = "./index.html";

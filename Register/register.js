@@ -31,7 +31,7 @@ function cadastrar() {
 
   } else {
     msgError.setAttribute('style', 'display: block')
-    msgError.innerHTML = '<strong>Please fill in all fields correctly before confirming.</strong>'
+    msgError.innerHTML = '<strong>Please fill in all fields correctly before confirming</strong>'
     msgSuccess.innerHTML = ''
     msgSuccess.setAttribute('style', 'display: none')
   }

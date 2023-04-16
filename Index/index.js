@@ -28,6 +28,7 @@ async function checkInfo(getLogin, getPassword) {
       const userDoc = loginCheck.docs[0];
       const userData = userDoc.data();
       if (userData.password === getPassword) {
+        sessionStorage.setItem('userData', JSON.stringify(userData));
         window.location.href = './main.html'
       } else {
         loginLabel.setAttribute('style', 'color: red')
@@ -58,7 +59,7 @@ function signin() {
     passwordLabel.setAttribute('style', 'color: red')
     password.setAttribute('style', 'border-color: red')
     msgError.setAttribute('style', 'display: block')
-    msgError.innerHTML = 'Preencha o campo usuário e password corretamente'
+    msgError.innerHTML = 'Please fill in all fields correctly before confirming'
     login.focus()
   } else {
     checkInfo(login.value, password.value)
