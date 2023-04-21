@@ -35,7 +35,6 @@ body {
 }
 
 .container {
-
   background-image: url("Images/Background.jpg");
   display: flex;
   flex-wrap: wrap;
