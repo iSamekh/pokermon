@@ -2,6 +2,16 @@ const users = db.collection("users")
 
 const btn = document.querySelector('.fa-eye')
 
+
+function key(e) {
+  const enter = event.keyCode;
+  if(enter === 13) {
+    signin();
+  }
+}
+
+document.addEventListener('keydown', key)
+
 btn.addEventListener('click', () => {
   let inputPassword = document.querySelector('#password')
 
@@ -60,7 +70,6 @@ function signin() {
     password.setAttribute('style', 'border-color: red')
     msgError.setAttribute('style', 'display: block')
     msgError.innerHTML = 'Please fill in all fields correctly before confirming'
-    login.focus()
   } else {
     checkInfo(login.value, password.value)
   }

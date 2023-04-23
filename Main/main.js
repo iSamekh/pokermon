@@ -10,98 +10,127 @@
         const render = () => {
 
             const ul = document.querySelector('[js-data="list"]')
-
             const li = document.createElement('li')
 
             const card = document.createElement('article')
-            const flip = document.createElement('div')
-            const frontCard = document.createElement('div')
-            const pokemonName = document.createElement('h1')
-            const cardImage = document.createElement('div')
-            const pokemon = document.createElement('img')
-            const pokemonType = document.createElement('div')
-            const types = document.createElement('span')
-            const type1 = document.createElement('img')
-            const type2 = document.createElement('img')
-
-            const nameContainer = document.createElement('h1')
-            const typeContainer = document.createElement('p')
-
- //           const [type] = typeColor
-
             card.setAttribute('class','card')
-            flip.setAttribute('class','flip')
-            
-            frontCard.style.setProperty('background-image','url("./Assets/Background/deepForest.png")')
-            frontCard.style.setProperty('border-color','darkgreen')
 
+            const flip = document.createElement('div')
+            flip.setAttribute('class','flip')
+
+            const frontCard = document.createElement('div')
             frontCard.setAttribute('class','frontCard')
+            frontCard.style.setProperty('background-image','url("./Assets/Background/deepForest.png")')
+            frontCard.style.setProperty('border-image','radial-gradient(#008f68,#fae042) 1')
+
+            const pokemonName = document.createElement('h1')
+            pokemonName.setAttribute('class','describe')
+            pokemonName.style.setProperty('background-image','linear-gradient(#008f68,#fae042)')
 
             pokemonName.innerHTML = 'Bulbasaur'
-            pokemonName.setAttribute('class','describe')
+
+            const cardImage = document.createElement('div')
             cardImage.setAttribute('class','cardImage')
+
+            const pokemon = document.createElement('img')
             pokemon.setAttribute('class','pokemon')
             pokemon.setAttribute('src','./Assets/Gen1/1.gif')
+
+            const pokemonType = document.createElement('div')
             pokemonType.setAttribute('class','describe')
+
+            const types = document.createElement('span')
             types.setAttribute('class','types')
+
+            const type1 = document.createElement('img')
             type1.setAttribute('class','type')
             type1.setAttribute('src','./Assets/Types/Grass.png')
+
+            const type2 = document.createElement('img')
             type2.setAttribute('class','type')
             type2.setAttribute('src','./Assets/Types/Poison.png')
 
 
+            const backCard = document.createElement('div')
+            backCard.setAttribute('class','backCard')
+            backCard.style.setProperty('border-image','radial-gradient(#008f68,#fae042) 1')
+            backCard.style.setProperty('background-image','url("./Assets/backCard/grass.jpg")')
+
+            const pokemonNameBack = document.createElement('h1')
+            pokemonNameBack.setAttribute('class','describe')
+            pokemonNameBack.innerHTML = 'Bulbasaur'
+
+            const attributes = document.createElement('div')
+            attributes.setAttribute('class','attributes')
+
+            const br = document.createElement('br')
+
+            const hp = document.createElement('h2')
+            hp.innerHTML = 'HP'
+
+            const hpVal = document.createElement('h2')
+            hpVal.innerHTML = 45
+
+            const atk = document.createElement('h2')
+            atk.innerHTML = 'Attack'
+
+            const atkVal = document.createElement('h2','br')
+            atkVal.innerHTML = 49
+
+            const def = document.createElement('h2')
+            def.innerHTML = 'Defense'
+
+            const defVal = document.createElement('h2')
+            defVal.innerHTML = 49
+
+            const spAtk = document.createElement('h2')
+            spAtk.innerHTML = 'Sp Attack'
+
+            const spAtkVal = document.createElement('h2')
+            spAtkVal.innerHTML = 65
+
+            const spDef = document.createElement('h2')
+            spDef.innerHTML = 'Sp Defense'
+
+            const spDefVal = document.createElement('h2')
+            spDefVal.innerHTML = 65
+
+            const spd = document.createElement('h2')
+            spd.innerHTML = 'Speed'
+
+            const spdVal = document.createElement('h2')
+            spdVal.innerHTML = 45
+
+ //           const [type] = typeColor
+
             ul.append(li)
             li.append(card)
+            
+            card.append(flip)
+            flip.append(frontCard,backCard)
             frontCard.append(pokemonName,cardImage,pokemonType)
             cardImage.append(pokemon)
             pokemonType.append(types)
             types.append(type1,type2)
-            card.append(flip,frontCard)
 
-/*                   
-            <article class="card">
-                <div class="flip">
-                <div class="frontCard" style="background-image: url('./Assets/Background/deepForest.png')">
-                    <h1 class="describe">Bulbasaur</h1>
-                    <div class="cardImage">
-                        <img class="pokemon" src="./Assets/Gen1/bulbasaur.gif" />
-                    </div>
-                    <div class="describe">
-                        <span class="types">
-                            <img class="type" src="./Assets/Types/Grass.png" />
-                            <img class="type" src="./Assets/Types/Poison.png" />
-                        </span>
-                    </div>
-                </div>
-
-                <div class="backCard" style="background-image: url('./Assets/backCard/grass.jpg')">
-                    <h1 class="describe">Bulbasaur</h1>
-                    <div class="attributes">
-                        <h2>HP</h2>
-                        <h2>45</h2>
-                        <br />
-                        <h2>Attack</h2>
-                        <h2>49</h2>
-                        <br />
-                        <h2>Defense</h2>
-                        <h2>49</h2>
-                        <br />
-                        <h2>SP. Atk</h2>
-                        <h2>65</h2>
-                        <br />
-                        <h2>SP. Def</h2>
-                        <h2>65</h2>
-                        <br />
-                        <h2>Speed</h2>
-                        <h2>45</h2>
-                    </div>
-                </div>
-            </article>
-*/
-
-
-
-
+            backCard.append(pokemonNameBack,attributes)
+            attributes.append(hp,
+                              hpVal,
+                              br.cloneNode(),
+                              atk,
+                              atkVal,
+                              br.cloneNode(),
+                              def,
+                              defVal,
+                              br.cloneNode(),
+                              spAtk,
+                              spAtkVal,
+                              br.cloneNode(),
+                              spDef,
+                              spDefVal,
+                              br.cloneNode(),
+                              spd,
+                              spdVal)
         }
 
         render();
