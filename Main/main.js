@@ -29,7 +29,7 @@
             pokemonName.setAttribute('class','describe')
             pokemonName.style.setProperty('background-image','linear-gradient(#008f68,#fae042)')
 
-            pokemonName.innerHTML = 'test'
+            pokemonName.innerHTML = pkm[n].name
 
             const cardImage = document.createElement('div')
             cardImage.setAttribute('class','cardImage')
@@ -56,7 +56,6 @@
             types.append(type2)
             }
         
-
             const backCard = document.createElement('div')
             backCard.setAttribute('class','backCard')
             backCard.style.setProperty('border-image','radial-gradient(#008f68,#fae042) 1')
@@ -64,7 +63,7 @@
 
             const pokemonNameBack = document.createElement('h1')
             pokemonNameBack.setAttribute('class','describe')
-            pokemonNameBack.innerHTML = 'test'
+            pokemonNameBack.innerHTML = pkm[n].name
 
             const attributes = document.createElement('div')
             attributes.setAttribute('class','attributes')
