@@ -42,7 +42,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   height: 90vh;
-  max-width: 90vw;
+  width: 90vw;
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;

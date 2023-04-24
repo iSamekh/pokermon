@@ -9,6 +9,8 @@
 
         const render = () => {
 
+            let n = 17
+
             const ul = document.querySelector('[js-data="list"]')
             const li = document.createElement('li')
 
@@ -27,14 +29,14 @@
             pokemonName.setAttribute('class','describe')
             pokemonName.style.setProperty('background-image','linear-gradient(#008f68,#fae042)')
 
-            pokemonName.innerHTML = 'Bulbasaur'
+            pokemonName.innerHTML = 'test'
 
             const cardImage = document.createElement('div')
             cardImage.setAttribute('class','cardImage')
 
             const pokemon = document.createElement('img')
             pokemon.setAttribute('class','pokemon')
-            pokemon.setAttribute('src','./Assets/Gen1/1.gif')
+            pokemon.setAttribute('src',pkm[n].gif)
 
             const pokemonType = document.createElement('div')
             pokemonType.setAttribute('class','describe')
@@ -44,12 +46,16 @@
 
             const type1 = document.createElement('img')
             type1.setAttribute('class','type')
-            type1.setAttribute('src','./Assets/Types/Grass.png')
+            type1.setAttribute('src',pkm[n].type1)
+            types.append(type1)
 
+            if(pkm[n].type2) {
             const type2 = document.createElement('img')
             type2.setAttribute('class','type')
-            type2.setAttribute('src','./Assets/Types/Poison.png')
-
+            type2.setAttribute('src',pkm[n].type2)
+            types.append(type2)
+            }
+        
 
             const backCard = document.createElement('div')
             backCard.setAttribute('class','backCard')
@@ -58,7 +64,7 @@
 
             const pokemonNameBack = document.createElement('h1')
             pokemonNameBack.setAttribute('class','describe')
-            pokemonNameBack.innerHTML = 'Bulbasaur'
+            pokemonNameBack.innerHTML = 'test'
 
             const attributes = document.createElement('div')
             attributes.setAttribute('class','attributes')
@@ -69,37 +75,37 @@
             hp.innerHTML = 'HP'
 
             const hpVal = document.createElement('h2')
-            hpVal.innerHTML = 45
+            hpVal.innerHTML = pkm[n].hp
 
             const atk = document.createElement('h2')
             atk.innerHTML = 'Attack'
 
             const atkVal = document.createElement('h2','br')
-            atkVal.innerHTML = 49
+            atkVal.innerHTML = pkm[n].atk
 
             const def = document.createElement('h2')
             def.innerHTML = 'Defense'
 
             const defVal = document.createElement('h2')
-            defVal.innerHTML = 49
+            defVal.innerHTML = pkm[n].def
 
             const spAtk = document.createElement('h2')
             spAtk.innerHTML = 'Sp Attack'
 
             const spAtkVal = document.createElement('h2')
-            spAtkVal.innerHTML = 65
+            spAtkVal.innerHTML = pkm[n].spAtk
 
             const spDef = document.createElement('h2')
             spDef.innerHTML = 'Sp Defense'
 
             const spDefVal = document.createElement('h2')
-            spDefVal.innerHTML = 65
+            spDefVal.innerHTML = pkm[n].spDef
 
             const spd = document.createElement('h2')
             spd.innerHTML = 'Speed'
 
             const spdVal = document.createElement('h2')
-            spdVal.innerHTML = 45
+            spdVal.innerHTML = pkm[n].spd
 
  //           const [type] = typeColor
 
@@ -111,7 +117,6 @@
             frontCard.append(pokemonName,cardImage,pokemonType)
             cardImage.append(pokemon)
             pokemonType.append(types)
-            types.append(type1,type2)
 
             backCard.append(pokemonNameBack,attributes)
             attributes.append(hp,
