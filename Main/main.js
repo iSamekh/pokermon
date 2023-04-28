@@ -9,8 +9,7 @@
 
         const render = () => {
 
-            let n = 18
-
+            for (let n = 1; n < 16;n++) {
             const ul = document.querySelector('[js-data="list"]')
             const li = document.createElement('li')
 
@@ -135,6 +134,7 @@
                               br.cloneNode(),
                               spd,
                               spdVal)
+            }
         }
 
         render();
