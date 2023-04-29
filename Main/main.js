@@ -9,7 +9,7 @@
 
         const render = () => {
 
-            for (let n = 1; n < 16;n++) {
+            for (let n = 1; n < 152;n++) {
             const ul = document.querySelector('[js-data="list"]')
             const li = document.createElement('li')
 

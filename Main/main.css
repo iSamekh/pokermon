@@ -37,10 +37,13 @@ body {
   overflow-y: scroll;
 }
 
-.container {
-  background-image: url("Images/Background.jpg");
+[js-data="list"] {
   display: flex;
   flex-wrap: wrap;
+}
+
+.container {
+  background-image: url("Images/Background.jpg");
   height: 90vh;
   width: 90vw;
   justify-content: flex-start;
