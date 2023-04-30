@@ -9,131 +9,134 @@
 
         const render = () => {
 
-            for (let n = 1; n < 152;n++) {
-            const ul = document.querySelector('[js-data="list"]')
-            const li = document.createElement('li')
+            for (let n = 1; n < 152; n++) {
+                const ul = document.querySelector('[js-data="list"]')
+                const li = document.createElement('li')
 
-            const card = document.createElement('article')
-            card.setAttribute('class','card')
+                const card = document.createElement('article')
+                card.setAttribute('class', 'card')
 
-            const flip = document.createElement('div')
-            flip.setAttribute('class','flip')
+                const flip = document.createElement('div')
+                flip.setAttribute('class', 'flip')
 
-            const frontCard = document.createElement('div')
-            frontCard.setAttribute('class','frontCard')
-            frontCard.style.setProperty('background-image','url("./Assets/Background/deepForest.png")')
-            frontCard.style.setProperty('border-image','radial-gradient(#008f68,#fae042) 1')
+                const frontCard = document.createElement('div')
+                frontCard.setAttribute('class', 'frontCard')
+                //switch
+                frontCard.style.setProperty('background-image', 'url("./Assets/Background/deepForest.png")')
+                frontCard.style.setProperty('border-image', 'radial-gradient(#008f68,#fae042) 1')
 
-            const pokemonName = document.createElement('h1')
-            pokemonName.setAttribute('class','describe')
-            pokemonName.style.setProperty('background-image','linear-gradient(#008f68,#fae042)')
+                const pokemonName = document.createElement('h1')
+                pokemonName.setAttribute('class', 'describe')
 
-            pokemonName.innerHTML = pkm[n].name
+                //switch
+                pokemonName.style.setProperty('background-image', 'linear-gradient(#008f68,#fae042)')
 
-            const cardImage = document.createElement('div')
-            cardImage.setAttribute('class','cardImage')
+                pokemonName.innerHTML = pkm[n].name
 
-            const pokemon = document.createElement('img')
-            pokemon.setAttribute('class','pokemon')
-            pokemon.setAttribute('src',pkm[n].gif)
+                const cardImage = document.createElement('div')
+                cardImage.setAttribute('class', 'cardImage')
 
-            const pokemonType = document.createElement('div')
-            pokemonType.setAttribute('class','describe')
+                const pokemon = document.createElement('img')
+                pokemon.setAttribute('class', 'pokemon')
+                pokemon.setAttribute('src', pkm[n].gif)
 
-            const types = document.createElement('span')
-            types.setAttribute('class','types')
+                const pokemonType = document.createElement('div')
+                pokemonType.setAttribute('class', 'describe')
 
-            const type1 = document.createElement('img')
-            type1.setAttribute('class','type')
-            type1.setAttribute('src',pkm[n].type1)
-            types.append(type1)
+                const types = document.createElement('span')
+                types.setAttribute('class', 'types')
 
-            if(pkm[n].type2) {
-            const type2 = document.createElement('img')
-            type2.setAttribute('class','type')
-            type2.setAttribute('src',pkm[n].type2)
-            types.append(type2)
-            }
-        
-            const backCard = document.createElement('div')
-            backCard.setAttribute('class','backCard')
-            backCard.style.setProperty('border-image','radial-gradient(#008f68,#fae042) 1')
-            backCard.style.setProperty('background-image','url("./Assets/backCard/grass.jpg")')
+                const type1 = document.createElement('img')
+                type1.setAttribute('class', 'type')
+                type1.setAttribute('src', pkm[n].type1)
+                types.append(type1)
 
-            const pokemonNameBack = document.createElement('h1')
-            pokemonNameBack.setAttribute('class','describe')
-            pokemonNameBack.innerHTML = pkm[n].name
+                if (pkm[n].type2) {
+                    const type2 = document.createElement('img')
+                    type2.setAttribute('class', 'type')
+                    type2.setAttribute('src', pkm[n].type2)
+                    types.append(type2)
+                }
 
-            const attributes = document.createElement('div')
-            attributes.setAttribute('class','attributes')
+                const backCard = document.createElement('div')
+                backCard.setAttribute('class', 'backCard')
+                backCard.style.setProperty('border-image', 'radial-gradient(#008f68,#fae042) 1')
+                backCard.style.setProperty('background-image', 'url("./Assets/backCard/grass.jpg")')
 
-            const br = document.createElement('br')
+                const pokemonNameBack = document.createElement('h1')
+                pokemonNameBack.setAttribute('class', 'describe')
+                pokemonNameBack.innerHTML = pkm[n].name
 
-            const hp = document.createElement('h2')
-            hp.innerHTML = 'HP'
+                const attributes = document.createElement('div')
+                attributes.setAttribute('class', 'attributes')
 
-            const hpVal = document.createElement('h2')
-            hpVal.innerHTML = pkm[n].hp
+                const br = document.createElement('br')
 
-            const atk = document.createElement('h2')
-            atk.innerHTML = 'Attack'
+                const hp = document.createElement('h2')
+                hp.innerHTML = 'HP'
 
-            const atkVal = document.createElement('h2','br')
-            atkVal.innerHTML = pkm[n].atk
+                const hpVal = document.createElement('h2')
+                hpVal.innerHTML = pkm[n].hp
 
-            const def = document.createElement('h2')
-            def.innerHTML = 'Defense'
+                const atk = document.createElement('h2')
+                atk.innerHTML = 'Attack'
 
-            const defVal = document.createElement('h2')
-            defVal.innerHTML = pkm[n].def
+                const atkVal = document.createElement('h2', 'br')
+                atkVal.innerHTML = pkm[n].atk
 
-            const spAtk = document.createElement('h2')
-            spAtk.innerHTML = 'Sp Attack'
+                const def = document.createElement('h2')
+                def.innerHTML = 'Defense'
 
-            const spAtkVal = document.createElement('h2')
-            spAtkVal.innerHTML = pkm[n].spAtk
+                const defVal = document.createElement('h2')
+                defVal.innerHTML = pkm[n].def
 
-            const spDef = document.createElement('h2')
-            spDef.innerHTML = 'Sp Defense'
+                const spAtk = document.createElement('h2')
+                spAtk.innerHTML = 'Sp Attack'
 
-            const spDefVal = document.createElement('h2')
-            spDefVal.innerHTML = pkm[n].spDef
+                const spAtkVal = document.createElement('h2')
+                spAtkVal.innerHTML = pkm[n].spAtk
 
-            const spd = document.createElement('h2')
-            spd.innerHTML = 'Speed'
+                const spDef = document.createElement('h2')
+                spDef.innerHTML = 'Sp Defense'
 
-            const spdVal = document.createElement('h2')
-            spdVal.innerHTML = pkm[n].spd
+                const spDefVal = document.createElement('h2')
+                spDefVal.innerHTML = pkm[n].spDef
 
- //           const [type] = typeColor
+                const spd = document.createElement('h2')
+                spd.innerHTML = 'Speed'
 
-            ul.append(li)
-            li.append(card)
-            
-            card.append(flip)
-            flip.append(frontCard,backCard)
-            frontCard.append(pokemonName,cardImage,pokemonType)
-            cardImage.append(pokemon)
-            pokemonType.append(types)
+                const spdVal = document.createElement('h2')
+                spdVal.innerHTML = pkm[n].spd
 
-            backCard.append(pokemonNameBack,attributes)
-            attributes.append(hp,
-                              hpVal,
-                              br.cloneNode(),
-                              atk,
-                              atkVal,
-                              br.cloneNode(),
-                              def,
-                              defVal,
-                              br.cloneNode(),
-                              spAtk,
-                              spAtkVal,
-                              br.cloneNode(),
-                              spDef,
-                              spDefVal,
-                              br.cloneNode(),
-                              spd,
-                              spdVal)
+                //           const [type] = typeColor
+
+                ul.append(li)
+                li.append(card)
+
+                card.append(flip)
+                flip.append(frontCard, backCard)
+                frontCard.append(pokemonName, cardImage, pokemonType)
+                cardImage.append(pokemon)
+                pokemonType.append(types)
+
+                backCard.append(pokemonNameBack, attributes)
+                attributes.append(hp,
+                    hpVal,
+                    br.cloneNode(),
+                    atk,
+                    atkVal,
+                    br.cloneNode(),
+                    def,
+                    defVal,
+                    br.cloneNode(),
+                    spAtk,
+                    spAtkVal,
+                    br.cloneNode(),
+                    spDef,
+                    spDefVal,
+                    br.cloneNode(),
+                    spd,
+                    spdVal)
             }
         }
 
