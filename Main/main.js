@@ -22,7 +22,7 @@
                 const frontCard = document.createElement('div')
                 frontCard.setAttribute('class', 'frontCard')
                 //switch
-                frontCard.style.setProperty('background-image', 'url("./Assets/Background/deepForest.png")')
+                frontCard.style.setProperty('background-image', `url("./Assets/Background/${pkm[n].type1}.png")`)
                 frontCard.style.setProperty('border-image', 'radial-gradient(#008f68,#fae042) 1')
 
                 const pokemonName = document.createElement('h1')
@@ -38,7 +38,7 @@
 
                 const pokemon = document.createElement('img')
                 pokemon.setAttribute('class', 'pokemon')
-                pokemon.setAttribute('src', pkm[n].gif)
+                pokemon.setAttribute('src', `./Assets/Gen1/${pkm[n].name}.gif`)
 
                 const pokemonType = document.createElement('div')
                 pokemonType.setAttribute('class', 'describe')
@@ -48,20 +48,20 @@
 
                 const type1 = document.createElement('img')
                 type1.setAttribute('class', 'type')
-                type1.setAttribute('src', pkm[n].type1)
+                type1.setAttribute('src', `./Assets/Types/${pkm[n].type1}.png`)
                 types.append(type1)
 
                 if (pkm[n].type2) {
                     const type2 = document.createElement('img')
                     type2.setAttribute('class', 'type')
-                    type2.setAttribute('src', pkm[n].type2)
+                    type2.setAttribute('src', `./Assets/Types/${pkm[n].type2}.png`)
                     types.append(type2)
                 }
 
                 const backCard = document.createElement('div')
                 backCard.setAttribute('class', 'backCard')
                 backCard.style.setProperty('border-image', 'radial-gradient(#008f68,#fae042) 1')
-                backCard.style.setProperty('background-image', 'url("./Assets/backCard/grass.jpg")')
+                backCard.style.setProperty('background-image', `url("./Assets/backCard/${pkm[n].type1}.png")`)
 
                 const pokemonNameBack = document.createElement('h1')
                 pokemonNameBack.setAttribute('class', 'describe')
@@ -148,7 +148,7 @@
             return {
                 normal,
                 fire: '#FDDFDF',
-                grass: '#DEFDE0',
+                grass: 'radial-gradient(#008f68,#fae042) 1',
                 electric: '#FCF7DE',
                 ice: '#DEF3FD',
                 water: '#DEDEDE',
@@ -168,7 +168,9 @@
     } catch (error) {
         return error
     }
+
 })()
+
 
 function quit() {
     window.location.href = "./index.html";
