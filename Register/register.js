@@ -1,9 +1,7 @@
 const users = db.collection("users")
 let Id = 0
 
-function submitForm(e) {
-  e.preventDefault();
-
+function submitForm() {
   users.add({
     login: getElementVal('login'),
     nickname: getElementVal('nickname'),
@@ -19,7 +17,7 @@ function submitForm(e) {
 document.getElementById("registerForm").addEventListener("submit", submitForm);
 
 function cadastrar(event) {
-  event.preventDefault();
+ // event.preventDefault();
   if (validNickname && validLogin && validPassword && validConfirmPassword) {
     msgSuccess.setAttribute('style', 'display: block')
     msgSuccess.innerHTML = '<strong>Registering player...</strong>'
