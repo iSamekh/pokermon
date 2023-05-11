@@ -18,7 +18,8 @@ function submitForm(e) {
 
 document.getElementById("registerForm").addEventListener("submit", submitForm);
 
-function cadastrar() {
+function cadastrar(event) {
+  event.preventDefault();
   if (validNickname && validLogin && validPassword && validConfirmPassword) {
     msgSuccess.setAttribute('style', 'display: block')
     msgSuccess.innerHTML = '<strong>Registering player...</strong>'
@@ -35,6 +36,7 @@ function cadastrar() {
     msgSuccess.innerHTML = ''
     msgSuccess.setAttribute('style', 'display: none')
   }
+  return false;
 }
 
 let btn = document.querySelector('#togglePassword')
