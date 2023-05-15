@@ -5,28 +5,27 @@
   }
 
   body {
-    background-image: url("../Index/Images/suits.jpg");
-    background-attachment: fixed;
+    background-image: url("../Index/Images/background.png");
   }
 
   .container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
   }
 
   .card {
     background-color: #000000F4;
     padding: 4vmin;
     border-radius: 3vmin;
-    box-shadow: 5px 10px 1px 0px #00000060
+    box-shadow: 5px 10px 1px 0px #00000060;
   }
 
   h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #FFFFFF;
+    color: #FFF;
   }
   
   .label-float input{

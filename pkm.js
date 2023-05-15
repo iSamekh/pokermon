@@ -588,78 +588,78 @@ const pkm = [null,
   _52 = {
     name: 'Meowth',
     type1: 'normal',
-    hp: 0,
-    atk: 0,
-    def: 0,
-    spAtk: 0,
-    spDef: 0,
-    spd: 100
+    hp: 40,
+    atk: 45,
+    def: 35,
+    spAtk: 40,
+    spDef: 40,
+    spd: 90
   },
 
   _53 = {
     name: 'Persian',
     type1: 'normal',
-    hp: 0,
-    atk: 0,
-    def: 0,
-    spAtk: 0,
-    spDef: 0,
-    spd: 100
+    hp: 65,
+    atk: 70,
+    def: 60,
+    spAtk: 65,
+    spDef: 65,
+    spd: 115
   },
 
   _54 = {
     name: 'Psyduck',
     type1: 'water',
-    hp: 0,
-    atk: 0,
-    def: 0,
-    spAtk: 0,
-    spDef: 0,
-    spd: 100
+    hp: 50,
+    atk: 52,
+    def: 48,
+    spAtk: 65,
+    spDef: 50,
+    spd: 55
   },
 
   _55 = {
     name: 'Golduck',
     type1: 'water',
-    hp: 0,
-    atk: 0,
-    def: 0,
-    spAtk: 0,
-    spDef: 0,
-    spd: 100
+    hp: 80,
+    atk: 82,
+    def: 78,
+    spAtk: 95,
+    spDef: 80,
+    spd: 85
   },
 
   _56 = {
     name: 'Mankey',
     type1: 'fighting',
-    hp: 0,
-    atk: 0,
-    def: 0,
-    spAtk: 0,
-    spDef: 0,
-    spd: 100
+    hp: 40,
+    atk: 80,
+    def: 35,
+    spAtk: 35,
+    spDef: 45,
+    spd: 70
   },
 
   _57 = {
     name: 'Primeape',
     type1: 'fighting',
-    hp: 0,
-    atk: 0,
-    def: 0,
-    spAtk: 0,
-    spDef: 0,
-    spd: 100
+    hp: 65,
+    atk: 105,
+    def: 60,
+    spAtk: 60,
+    spDef: 70,
+    spd: 95
   },
 
   _58 = {
     name: 'Growlithe',
     type1: 'fire',
-    hp: 0,
-    atk: 0,
-    def: 0,
-    spAtk: 0,
-    spDef: 0,
-    spd: 100
+    hp: 55,
+    atk: 70,
+    def: 45,
+    spAtk: 70,
+    spDef: 50,
+    spd: 60
   },
 
   _59 = {
