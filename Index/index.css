@@ -1,71 +1,71 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
 
-  body {
-    background-image: url("../Index/Images/background.png");
-  }
+body {
+  background-image: url("../Index/Images/background.png");
+}
 
-  .container {
-    align-items: center;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-  }
+.container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
 
-  .card {
-    background-color: #000000F4;
-    padding: 4vmin;
-    border-radius: 3vmin;
-    box-shadow: 5px 10px 1px 0px #00000060;
-  }
+.card {
+  background-color: #000000F4;
+  padding: 4vmin;
+  border-radius: 3vmin;
+  box-shadow: 5px 10px 1px 0px #00000060;
+}
 
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #FFF;
-  }
-  
-  .label-float input{
-    width: 100%;
-    padding: 5px 5px;
-    display: inline-block;
-    border: 0;
-    border-bottom: 0.3vmin solid black;
-    background-color: #FFFFFF;
-    border-radius: 4vmin;
-    outline: none;
-    min-width: 180px;
-    font-size: 16px;
-    transition: all .3s ease-out;
-  }
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #FFF;
+}
 
-  .label-float{
-    position: relative;
-    padding-top: 13px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
+.label-float input {
+  width: 100%;
+  padding: 5px 5px;
+  display: inline-block;
+  border: 0;
+  border-bottom: 0.3vmin solid black;
+  background-color: #FFFFFF;
+  border-radius: 4vmin;
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all .3s ease-out;
+}
 
-  .label-float input:focus{
-    border-bottom: 0.3vmin solid #EE0000;
-  }
+.label-float {
+  position: relative;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.label-float input:focus {
+  border-bottom: 0.3vmin solid #EE0000;
+}
 
 
-  .label-float label{
-    color: #000000;
-    position: absolute;
-    pointer-events: none;
-    top: 14%;
-    left: 4%;
-    margin-top: 13px;
-    transition: all .3s ease-out;
-  }
+.label-float label {
+  color: #000000;
+  position: absolute;
+  pointer-events: none;
+  top: 14%;
+  left: 4%;
+  margin-top: 13px;
+  transition: all .3s ease-out;
+}
 
-  .label-float input:focus + label,
-.label-float input:valid + label {
+.label-float input:focus+label,
+.label-float input:valid+label {
   font-size: 13px;
   margin-top: -5%;
   margin-left: -4%;
@@ -86,7 +86,7 @@ button {
   transition: all .4s ease-out;
 }
 
-button:hover{
+button:hover {
   background-color: #EE0000;
   color: #fff;
 }
@@ -119,7 +119,7 @@ a:hover {
   color: #00EE00;
 }
 
-.fa-eye{
+.fa-eye {
   position: absolute;
   top: 40%;
   right: 3%;
@@ -127,7 +127,7 @@ a:hover {
   color: #000000;
 }
 
- #msgError{
+#msgError {
   text-align: center;
   color: #EE0000;
   background-color: #ffbbbb;

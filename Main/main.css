@@ -8,8 +8,6 @@
   list-style-type: none;
 }
 
-
-
 body {
   background-image: url("Images/Pattern.jpg");
   display: flex;
@@ -92,21 +90,17 @@ h2 {
 .frontCard,
 .backCard {
   align-items: center;
-  background-color: white;
   background-position: center;
   background-size: cover;
-  border-radius: 1.5vmin;
   display: flex;
   flex-direction: column;
   height: 28vh;
   justify-content: center;
   padding: 1vh 1vw 1vh 1vw;
   width: 10vw;
-  border-style: solid;
-  border-image: radial-gradient(#F22, #F66) 1;
-  border-width: 1vmin;
   position: absolute;
   backface-visibility: hidden;
+  border: 0.7vmin solid;
 }
 
 .backCard {
@@ -116,7 +110,6 @@ h2 {
 .card:hover .flip {
   transform: rotateY(180deg);
 }
-
 
 .cardImage {
   display: flex;
@@ -144,10 +137,8 @@ h2 {
 }
 
 .describe {
-  background-image: linear-gradient(rgb(0,143,104), rgb(250,224,66));
   border-radius: 100vmax;
   width: 8vw;
-
 }
 
 .attributes {
@@ -174,6 +165,7 @@ h2 {
 .types {
   display: flex;
   justify-content: space-around;
+  border-radius: 5vmin;
 }
 
 button {
