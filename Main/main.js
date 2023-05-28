@@ -33,6 +33,7 @@
 
                 const cardImage = document.createElement("div")
                 cardImage.setAttribute("class", "cardImage")
+                cardImage.style.setProperty("background-image", `linear-gradient(${typeColor(pkm[n].type1, 0)+"55"},${typeColor(pkm[n].type1, 1)+"BB"})`)//aaaaaaaaaa
 
                 const pokemon = document.createElement("img")
                 pokemon.setAttribute("class", "pokemon")
@@ -61,52 +62,68 @@
                 backCard.setAttribute("class", "backCard")
                 backCard.style.setProperty("border-image", `radial-gradient(${typeColor(pkm[n].type1, 0)},${typeColor(pkm[n].type1, 1)}) 1`)
                 backCard.style.setProperty("background-image", `url("./Assets/backCard/${pkm[n].type1}.png")`)
-                
+
                 const pokemonNameBack = document.createElement("h1")
                 pokemonNameBack.setAttribute("class", "describe")
                 pokemonNameBack.style.setProperty("background-image", `linear-gradient(${typeColor(pkm[n].type1, 0)},${typeColor(pkm[n].type1, 1)})`)
                 pokemonNameBack.innerHTML = pkm[n].name
 
+                /*Refatorar esse trecho utilizando for each, necessário alterar a estrutura de dados do pkm.js (fazer um sub objeto para atributos) */
+
                 const attributes = document.createElement("div")
                 attributes.setAttribute("class", "attributes")
-
+                attributes.style.setProperty("background-image", `linear-gradient(${typeColor(pkm[n].type1, 0)+"55"},${typeColor(pkm[n].type1, 1)+"BB"})`) //aaaaaa
                 const br = document.createElement("br")
 
                 const hp = document.createElement("h2")
                 hp.innerHTML = "HP"
+                hp.style.setProperty("background-image", `linear-gradient(${typeColor(pkm[n].type1, 0)},${typeColor(pkm[n].type1, 1)})`)
 
                 const hpVal = document.createElement("h2")
                 hpVal.innerHTML = pkm[n].hp
+                hpVal.style.setProperty("background-color", mapStatusColor(pkm[n].hp))
+                console.log(`mapStatusColor(${pkm[n].hp})`)
 
                 const atk = document.createElement("h2")
                 atk.innerHTML = "Attack"
+                atk.style.setProperty("background-image", `linear-gradient(${typeColor(pkm[n].type1, 0)},${typeColor(pkm[n].type1, 1)})`)
 
                 const atkVal = document.createElement("h2", "br")
                 atkVal.innerHTML = pkm[n].atk
+                atkVal.style.setProperty("background-color", mapStatusColor(pkm[n].atk))
 
                 const def = document.createElement("h2")
                 def.innerHTML = "Defense"
+                def.style.setProperty("background-image", `linear-gradient(${typeColor(pkm[n].type1, 0)},${typeColor(pkm[n].type1, 1)})`)
 
                 const defVal = document.createElement("h2")
                 defVal.innerHTML = pkm[n].def
+                defVal.style.setProperty("background-color", mapStatusColor(pkm[n].def))
 
                 const spAtk = document.createElement("h2")
                 spAtk.innerHTML = "Sp Attack"
+                spAtk.style.setProperty("background-image", `linear-gradient(${typeColor(pkm[n].type1, 0)},${typeColor(pkm[n].type1, 1)})`)
 
                 const spAtkVal = document.createElement("h2")
                 spAtkVal.innerHTML = pkm[n].spAtk
+                spAtkVal.style.setProperty("background-color", mapStatusColor(pkm[n].spAtk))
 
                 const spDef = document.createElement("h2")
                 spDef.innerHTML = "Sp Defense"
+                spDef.style.setProperty("background-image", `linear-gradient(${typeColor(pkm[n].type1, 0)},${typeColor(pkm[n].type1, 1)})`)
 
                 const spDefVal = document.createElement("h2")
                 spDefVal.innerHTML = pkm[n].spDef
+                spDefVal.style.setProperty("background-color", mapStatusColor(pkm[n].spDef))
 
                 const spd = document.createElement("h2")
                 spd.innerHTML = "Speed"
+                spd.style.setProperty("background-image", `linear-gradient(${typeColor(pkm[n].type1, 0)},${typeColor(pkm[n].type1, 1)})`)
 
                 const spdVal = document.createElement("h2")
                 spdVal.innerHTML = pkm[n].spd
+                spdVal.style.setProperty("background-color", mapStatusColor(pkm[n].spd))
+                /* REFATORAR */
 
                 ul.append(li)
                 li.append(card)
@@ -117,8 +134,10 @@
                 cardImage.append(pokemon)
                 pokemonType.append(types)
 
+                /* REFATORAR */
                 backCard.append(pokemonNameBack, attributes)
-                attributes.append(hp,
+                attributes.append(
+                    hp,
                     hpVal,
                     br.cloneNode(),
                     atk,
@@ -135,6 +154,8 @@
                     br.cloneNode(),
                     spd,
                     spdVal)
+                /* REFATORAR */
+
             }
         }
 
@@ -144,7 +165,7 @@
             const electric = ["#FFDF00", "#FFCC00"]     //FFDF00    FFCC00
             const fairy = ["#F765B8", "#FF85DA"]        //FF85DA    F765B8
             const fighting = ["#F25B43", "#FAA528"]     //F25B43    FAA528
-            const fire = ["#FA0", "#B22"]               //FA0       B22
+            const fire = ["#FFAA00", "#BB2222"]         //FFAA00    BB2222
             const flying = ["#E6E0D4", "#FAF9F5"]       //E6E0D4    FAF9F5
             const ice = ["#F6F6F7", "#B0C2D7"]          //F6F6F7    B0C2D7
             const ghost = ["#453A68", "#CAC0F7"]        //453A68    CAC0F7
@@ -230,6 +251,29 @@
                     console.log("Type not registered yet: " + type);
             }
             return type
+        }
+
+        function mapStatusColor(number) {
+            let red, green, blue;
+
+            if (number <= 75) {
+                red = 255;
+                green = Math.round((255 / 75) * number);
+                blue = 0;
+            } else if (number <= 150) {
+                red = Math.round(255 - ((255 / 75) * (number - 75)));
+                green = 255;
+                blue = 0;
+            } else if (number <= 225) {
+                red = 0;
+                green = 255;
+                blue = Math.round((255 / 75) * (number - 150));
+            } else {
+                red = 0;
+                green = Math.round(255 - ((255 / 75) * (number - 225)));
+                blue = 255;
+            }
+            return `rgb(${red},${green},${blue})`;
         }
 
         render();

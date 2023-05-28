@@ -49,7 +49,6 @@ body {
   border-radius: 1vmax;
   padding: 10vh 5vw 5vh 5vw;
   overflow: hidden scroll;
-  scrollbar-color: #d4aa70 #e4e4e4;
 }
 
 .info h1 {
@@ -142,7 +141,7 @@ h2 {
 }
 
 .attributes {
-  background-color: #111111BB;
+  background-color: #FFFFFF88;
   border-radius: 1vmin;
   width: 8vw;
   height: 22vh;
