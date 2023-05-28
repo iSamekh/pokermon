@@ -73,16 +73,19 @@ h1 {
   text-align: center;
   text-justify: center;
   padding: 0.5vh;
+  border: 0.3vmin #272727 solid;
 }
 
 h2 {
   padding: 0.1vh;
   font-size: 0.8vmin;
+  border: 0.05vmin #272727 solid;
+
 }
 
 .attributes br {
   content: "";
-  margin: 1vh;
+  margin: 0.5vmin;
   display: block;
 }
 
@@ -116,7 +119,6 @@ h2 {
   align-items: flex-end;
   height: 14vh;
   width: 8vw;
-  background-color: #FFFFFF88;
   border-radius: 100vmax;
   margin: 1vh 1vw;
   padding: 1vh 1vw 1vh 1vw;
@@ -141,19 +143,18 @@ h2 {
 }
 
 .attributes {
-  background-color: #FFFFFF88;
   border-radius: 1vmin;
   width: 8vw;
   height: 22vh;
   padding: 1vh 0.7vw;
   margin: 0.5vh 1vw;
   font-size: 0.6vmin;
+  border: 0.3vmin #272727 solid;
 }
 
 .attributes h2 {
   margin-bottom: 0.5vh;
   text-align: center;
-  background-color: #FFFFFF;
   border-radius: 1vmin;
 }
 
@@ -165,6 +166,8 @@ h2 {
   display: flex;
   justify-content: space-around;
   border-radius: 5vmin;
+  border: 0.3vmin #272727 solid;
+
 }
 
 button {
